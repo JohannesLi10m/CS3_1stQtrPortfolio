@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2> Q1 2nd Graded Exercise submitted by DELA CRUZ, Johann Sebastian A. of 9-Lithium </h2>
+
+    <label>Meal Price:
+        <input id="mealPrice">
+    </label><br>
+    <label>Tip:
+        <input id="tip">
+    </label><br>
+    <label>Service Charge (%):
+        <input id="serviceCharge">
+    </label><br>
+    <button onclick="totalMeal()">Accept Input</button>
+
+    <p id="result">Total Meal: </p>
+
+    <footer>
+        <p><strong>References (APA 7th):</strong></p>
+        <p>MDN Web Docs. (n.d.). <i>Number.prototype.toFixed()</i>. Mozilla. Retrieved August 20, 2025, from 
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+        </p>
+        <p>W3Schools. (n.d.). <i>HTML DOM Input Text value Property</i>. Retrieved August 20, 2025, from 
+            https://www.w3schools.com/jsref/prop_text_value.asp
+        </p>
+    </footer>
+
+    <script>
+        function totalMeal() {
+            let mp = document.getElementById("mealPrice").value;
+            let tip = document.getElementById("tip").value;
+            let sc = document.getElementById("serviceCharge").value;
+
+            let totalCost = mp * 1 + tip * 1 + (sc / 100 * mp);
+
+            document.getElementById("result").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+</body>
+</html>
